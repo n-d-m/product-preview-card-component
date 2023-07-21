@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryCyan: hsl(158, 36%, 37%);
+    --primaryCream: hsl(30, 38%, 92%);
+    --neutralDarkBlue: hsl(212, 21%, 14%);
+    --neutralGrayBlue: hsl(228, 12%, 48%);
+    --neutralWhite: hsl(0, 0%, 100%);
+}
+
+p{
+    color: var(--neutralGrayBlue);
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+}
+
+h1{
+    font-family: Fraunces, serif;
+}
+
+body{
+    background-color: var(--primaryCream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 99vh;
+}
+
+main{
+    width: 350px;
+    min-height: 450px;
+    background-color: var(--neutralWhite);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 2fr 2fr .5fr .5fr;
+    grid-template-areas:
+        "img"
+        "info"
+        "price"
+        "btn";
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+main img{
+    grid-area: img;
+    max-width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.info{
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0px 27px;
+    height: 95%;
+    margin-top: 10px;
+}
+
+.spacedChars{
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-size: 12px;
+}
+
+.info h1{
+    color: var(--neutralDarkBlue);
+    line-height: 2rem;
+
+}
+
+.info p{
+    line-height: 1.4rem;
+}
+
+.price{
+    grid-area: price;
+    height: 100%;
+    padding: 0px 27px;
+    display: flex;
+    align-items: center;
+}
+
+.price  h1{
+    color: var(--primaryCyan);
+    margin-right: 1.3rem;
+}
+
+.price p{
+    text-decoration: line-through;
+}
+
+button{
+    grid-area: btn;
+    background-color: var(--primaryCyan);
+    color: var(--neutralWhite);
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    align-items: center;
+    padding: 5px 0px 15px 0px;
+    margin: 5px 27px 20px 27px;
+}
+
+button img{
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 476px) {
+    body {
+        background-color: var(--primaryCream);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 99vh;
+    }
+
+    main {
+        width: 600px;
+        height: 45vh;
+        min-height: 450px;
+        background-color: var(--neutralWhite);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr .5fr .5fr;
+        grid-template-areas:
+            "img info"
+            "img info"
+            "img price"
+            "img btn";
+        align-items: center;
+        padding-right: 10px;
+        margin-bottom: 30px;
+    }
+
+    main img {
+        grid-area: img;
+        height: 100%;
+        object-fit: cover;
+
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .info {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0px 27px;
+        height: 95%;
+        margin-top: 10px;
+    }
+
+    .spacedChars {
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        font-size: 12px;
+    }
+
+    .info h1 {
+        color: var(--neutralDarkBlue);
+        line-height: 2rem;
+
+    }
+
+    .info p {
+        line-height: 1.4rem;
+    }
+
+    .price {
+        grid-area: price;
+        height: 100%;
+        padding: 0px 27px;
+        display: flex;
+        align-items: center;
+    }
+
+    .price h1 {
+        color: var(--primaryCyan);
+        margin-right: 1.3rem;
+    }
+
+    .price p {
+        text-decoration: line-through;
+    }
+
+    button {
+        grid-area: btn;
+        background-color: var(--primaryCyan);
+        color: var(--neutralWhite);
+        font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 10px;
+        border: none;
+        align-items: center;
+        padding: 5px 0px 15px 0px;
+        margin: 15px 27px 30px 27px;
+    }
+
+    button img {
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+}
