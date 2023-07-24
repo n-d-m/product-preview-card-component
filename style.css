@@ -89,12 +89,12 @@ main{
     height: 100%;
     padding: 0px 27px;
     display: flex;
+    gap: 1.3rem;
     align-items: center;
 }
 
 .price  h1{
     color: var(--primaryCyan);
-    margin-right: 1.3rem;
 }
 
 .price p{
@@ -134,15 +134,6 @@ button img{
 }
 
 @media screen and (min-width: 476px) {
-    body {
-        background-color: var(--primaryCream);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 99vh;
-    }
-
     main {
         width: 600px;
         height: 45vh;
@@ -168,80 +159,5 @@ button img{
         height: 100%;
         background-size: cover;
         border-radius: 10px 0px 0px 10px;
-    }
-
-    .info {
-        grid-area: info;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 0px 27px;
-        height: 95%;
-        margin-top: 10px;
-    }
-
-    .spacedChars {
-        text-transform: uppercase;
-        letter-spacing: .5rem;
-        font-size: 12px;
-    }
-
-    .info h1 {
-        color: var(--neutralDarkBlue);
-        line-height: 2rem;
-
-    }
-
-    .info p {
-        line-height: 1.4rem;
-    }
-
-    .price {
-        grid-area: price;
-        height: 100%;
-        padding: 0px 27px;
-        display: flex;
-        align-items: center;
-    }
-
-    .price h1 {
-        color: var(--primaryCyan);
-        margin-right: 1.3rem;
-    }
-
-    .price p {
-        text-decoration: line-through;
-    }
-
-    button {
-        grid-area: btn;
-        background-color: var(--primaryCyan);
-        color: var(--neutralWhite);
-        font-family: Montserrat, sans-serif;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 10px;
-        border: none;
-        align-items: center;
-        padding: 5px 0px 15px 0px;
-        margin: 15px 27px 30px 27px;
-    }
-
-    button:hover{
-        background-color: hsl(157, 44%, 17%);
-    }
-
-    button img {
-        padding-right: 10px;
-        padding-top: 10px;
-    }
-
-    .attribution {
-        font-size: 11px;
-        text-align: center;
-    }
-
-    .attribution a {
-        color: hsl(228, 45%, 44%);
     }
 }
